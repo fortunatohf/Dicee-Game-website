@@ -9,6 +9,14 @@ var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 var image2 = document.querySelectorAll("img")[1];
 image2.setAttribute("src", randomImageSource2);
 
+const refreshButton = document.querySelector('.refresh-button');
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+
 if (randomNumber1 > randomNumber2) {
     document.querySelector("h1").innerHTMl = "Player 1 wins!";
 }
